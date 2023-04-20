@@ -7,13 +7,16 @@ import org.junit.jupiter.api.Test;
 
 class FizzbuzzTest {
 
+	private Fizzbuzz fb;
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		fb=new Fizzbuzz();
 	}
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		assertEquals("1",fb.fuzzBuzz(1));
 	}
 
 }
