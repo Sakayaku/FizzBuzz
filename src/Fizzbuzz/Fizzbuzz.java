@@ -6,12 +6,15 @@ public class Fizzbuzz {
 	private static final String[] traduction= {"fizz","buzz"}; 
 
 	public String fuzzBuzz(int numero) {
+		StringBuilder resultat = new StringBuilder();
 		for (int i=0;i<numSpeciaux.length;i++) {
 			if (numero%numSpeciaux[i]==0) {
-				return traduction[i];
+				resultat.append(traduction[i]);
 			}
 		}
-		return Integer.toString(numero);
-		
+		if (resultat.isEmpty()) {
+			return Integer.toString(numero);
+		}
+		return resultat.toString();
 	}
 }
